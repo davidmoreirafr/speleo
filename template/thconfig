@@ -1,0 +1,42 @@
+encoding  utf-8
+source cave.th
+
+layout DefaultLayout
+  #map-header 0 0 off
+  #legend off
+  colour map-bg [70 70 70]
+  opacity 70
+  language fr
+endlayout
+
+export map -layout DefaultLayout -projection plan -o plan.pdf
+
+export map -projection plan \
+  -output MiddleEarthPlan.xhtml
+
+#projection: plan, elevation,extended,none
+
+export map -output ext.pdf \
+  -layout DefaultLayout \
+  -proj elevation \
+  -layout-map-header 0 20 nw \
+  -layout-map-comment "Elevation"
+
+export map -output ext2.pdf \
+  -layout DefaultLayout \
+  -proj extended \
+  -layout-map-header 0 20 nw \
+  -layout-map-comment "Extented"
+
+export map -output cave.pdf -proj plan \
+  -layout DefaultLayout
+
+#  -layout-map-comment "Above"
+  
+#  -layout-map-image 0 120 s ext.pdf \
+#  -layout-map-header 0 0 n \
+# -layout-map-image 0 180 s ext2.pdf \
+#  -layout-map-header 0 0 n \
+#system "rm ext.pdf ext2.pdf"
+export model -output map.plt
+export atlas -layout DefaultLayout -projection plan -o atlas.pdf

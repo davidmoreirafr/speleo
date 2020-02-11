@@ -1,0 +1,7 @@
+encoding  utf-8
+survey main \
+  -title "XXX Where XXX" \
+  -declination [1990 2.1 2000 3.4 - 3 degrees]
+  input points
+  input map.th2
+endsurvey
