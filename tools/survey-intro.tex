@@ -1,0 +1,221 @@
+\documentclass[11pt,a5paper]{book}
+\usepackage[top=2cm,bottom=1.3cm,inner=1.5cm,outer=0.2cm]{geometry}
+%\usepackage[]{geometry}
+\usepackage{multirow}
+\usepackage{hhline}
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\usepackage{array}
+\usepackage{amssymb}
+\usepackage[table]{xcolor}
+\usepackage{tikz}
+\fancyhf{}
+\rhead{Page .... of ....}
+%\lhead{by ......}
+\lfoot{Date ../../..}
+\cfoot{Cave: ............}
+\rfoot{Sketcher: ...........}
+
+\newcommand{\papiermillimetre}[2]{
+  \begin{tikzpicture}[remember picture]
+    \draw (0,0) grid (#1,#2);
+    \draw[very thin, orange] (0,0) grid[step=0.1] (#1,#2);
+    \draw[very thin, black] (0,0) grid[step=1] (#1,#2);
+  \end{tikzpicture}
+}
+\newcommand{\sketchpaper}{
+  \begin{minipage}{0.30 \linewidth}
+    North: $\uparrow~~\leftarrow$
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.30 \linewidth}
+    Scale: 1 for ........
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.30 \linewidth}
+    Plan / Profile
+  \end{minipage}
+  \vspace{1cm}
+  \papiermillimetre{12}{17}
+}
+\newcommand{\surveytable}{
+  
+  \begin{tabular}{
+      |l % Station
+      |>{\centering}m{0.8cm} % <->
+      |>{\centering}m{1cm} % azimut
+      |>{\centering}m{1cm} % pente
+      |>{\centering}m{1cm} % left
+      |>{\centering}m{1cm} % right
+      |>{\centering}m{1cm} % up
+      |>{\centering}m{1cm} % down
+      |m{1cm}|} % notes
+    \hline
+        {\tiny Station}& \multicolumn{3}{c|}{Survey} & $\leftarrow$ & $\rightarrow$ & $\uparrow$ & $\downarrow$ & Notes\\
+        \hline %\hhline{-~~~-----}
+        \multirow{2}{*}{}& $\leftrightarrow$ & $N\angle$ & $\measuredangle$&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~~}
+        \multirow{2}{*}{}&\cellcolor{gray!25}& \cellcolor{gray!25}& \cellcolor{gray!25} &&&&&\\
+        \hline
+  \end{tabular}
+}
+\newcommand{\intropage}{
+  \begin{tabular}{
+      ||m{5.5cm}
+      |m{5.5cm}||
+    }
+    \hline
+    \multicolumn{2}{||c||}{Survey}\\
+    \hline
+    \hline
+    Cave~:&Area~:\\
+    &\\
+    \hline
+    Date~:&Ville~:\\
+    &\\
+    \hline
+  \end{tabular}
+
+  \vspace{1cm}
+
+  \begin{minipage}{0.50 \linewidth}
+    \begin{tabular}{||m{2.5cm} m{2.5cm}||}
+      \hline
+      \multicolumn{2}{||c||}{Personnel}\\
+      \hline
+      \hline
+      Sketch &\\
+      \hline
+      Fore Sight &\\
+      \hline
+      Point/Back Sight &\\
+      \hline
+       &\\
+      \hline
+       &\\
+      \hline
+       &\\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \hfill
+  \begin{minipage}{0.50 \linewidth}
+    %Surveys (FIXME)
+  \end{minipage}
+
+  \vspace{1cm}
+
+  \begin{minipage}{0.5 \linewidth}
+    \begin{tabular}{||m{2.5cm}|m{2.5cm}||}
+      \hline
+      \multicolumn{2}{||c||}{Trip Information}\\
+      \hline
+      \hline
+      {\tiny Time in}&{\tiny Time out}\\
+      &\\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}{0.5 \linewidth}
+  \end{minipage}
+
+  \vspace{1cm}
+
+  \begin{minipage}{0.5 \linewidth}
+    \begin{tabular}{||m{2.5cm}|m{2.5cm}||}
+      \hline
+      \multicolumn{2}{||c||}{Instruments}\\
+      \hline
+      \hline
+      &\\
+      \hline
+      &\\
+      \hline
+      &\\
+      \hline
+      &\\
+      \hline
+    \end{tabular}
+  \end{minipage}
+  \begin{minipage}{0.5 \linewidth}
+    \begin{center}
+      %Notes
+    \end{center}
+
+  \end{minipage}
+
+}
+\begin{document}
+\intropage
+\newpage
+\surveytable
+\newpage
+\sketchpaper
+\newpage
+\surveytable
+\end{document}
