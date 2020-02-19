@@ -1,4 +1,4 @@
-\documentclass[11pt,a5paper]{book}
+\documentclass[8pt,a5paper]{book}
 \usepackage[top=2cm,bottom=1.3cm,inner=1.5cm,outer=0.2cm]{geometry}
 %\usepackage[]{geometry}
 \usepackage{multirow}
@@ -9,6 +9,8 @@
 \usepackage{amssymb}
 \usepackage[table]{xcolor}
 \usepackage{tikz}
+\usepackage[document]{ragged2e}
+
 \fancyhf{}
 \rhead{Page .... of ....}
 %\lhead{by ......}
@@ -39,17 +41,17 @@
   \papiermillimetre{12}{17}
 }
 \newcommand{\surveytable}{
-  
+  \begin{scriptsize}
   \begin{tabular}{
-      |l % Station
+      |>{\centering}m{0.8cm} % Station
       |>{\centering}m{0.8cm} % <->
-      |>{\centering}m{1cm} % azimut
-      |>{\centering}m{1cm} % pente
-      |>{\centering}m{1cm} % left
-      |>{\centering}m{1cm} % right
-      |>{\centering}m{1cm} % up
-      |>{\centering}m{1cm} % down
-      |m{1cm}|} % notes
+      |>{\centering}m{0.8cm} % azimut
+      |>{\centering}m{0.8cm} % pente
+      |>{\centering}m{0.8cm} % left
+      |>{\centering}m{0.8cm} % right
+      |>{\centering}m{0.8cm} % up
+      |>{\centering}m{0.8cm} % down
+      |m{2.8cm}|} % notes
     \hline
         {\tiny Station}& \multicolumn{3}{c|}{Survey} & $\leftarrow$ & $\rightarrow$ & $\uparrow$ & $\downarrow$ & Notes\\
         \hline %\hhline{-~~~-----}
@@ -119,10 +121,59 @@
         \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
         \hhline{-~~~-----}
         \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
+        \hhline{~---~~~}
+        \multirow{2}{*}{}& \multirow{2}{*}{} & \multirow{2}{*}{} & \multirow{2}{*}{} &&&&&\\
+        \hhline{-~~~-----}
+        \multirow{2}{*}{}& & & &\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\multirow{2}{*}{}&\\
         \hhline{~---~~~~}
         \multirow{2}{*}{}&\cellcolor{gray!25}& \cellcolor{gray!25}& \cellcolor{gray!25} &&&&&\\
         \hline
   \end{tabular}
+  \end{scriptsize}
 }
 \newcommand{\intropage}{
   \begin{tabular}{
@@ -215,7 +266,7 @@
 \newpage
 \surveytable
 \newpage
-\sketchpaper
+\surveytable
 \newpage
 \surveytable
 \end{document}
